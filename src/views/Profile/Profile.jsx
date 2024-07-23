@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { getProfile } from '../../apiCalls/apiCalls';
 
 export const Profile = () => {
+  
 
     const [profileData, setProfileData] = useState({
         first_name: "",

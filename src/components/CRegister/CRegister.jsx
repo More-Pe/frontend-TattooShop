@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { CInput } from '../CInput/CInput';
-import { RegisterUser } from '../../apiCalls/apiCalls';
+import { CInput } from '../CInput/CInput.jsx';
+import { RegisterUser } from '../../apiCalls/apiCalls.js';
 import { useNavigate } from 'react-router-dom';
 
 export const CRegister = () => {
@@ -9,7 +9,7 @@ export const CRegister = () => {
 
 	const [credentials, setCredentials] = useState({
 		email: '',
-		password: '',
+		password_hash: '',
 	});
 	const handleChange = (e) => {
 		console.log('HandleChange');
@@ -51,7 +51,7 @@ export const CRegister = () => {
 				{/* <label htmlFor="password">Password </label> */}
 				<CInput
 					type='password'
-					name='password'
+					name='password_hash'
 					placeholder='Password'
 					emitFunction={handleChange}
 				/>

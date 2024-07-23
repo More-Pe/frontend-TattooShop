@@ -8,7 +8,7 @@ export const CLogin = () => {
 	const navigate = useNavigate();
 	const [credentials, setCredentials] = useState({
 		email: '',
-		password: '',
+		password_hash: '',
 	});
 
 	function handleChange(e) {
@@ -51,7 +51,7 @@ export const CLogin = () => {
 			<div>
 				<CInput
 					type='password'
-					name='password'
+					name='password_hash'
 					placeholder='Password'
 					emitFunction={handleChange}
 				/>
@@ -64,4 +64,4 @@ export const CLogin = () => {
 			/>
 		</>
 	);
-};
+}

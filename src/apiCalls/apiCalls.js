@@ -1,41 +1,70 @@
-const URL = 'http://localhost:4000/api'
+const URL = 'http://localhost:4000/api/'
 
 export const RegisterUser = async (credentials) => {
-	const request = await fetch(`${URL}/register`, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(credentials),
-	});
-	const result = await request.json();
-	console.log(result);
+    try {
+        const request = await fetch(`${URL}auth/register`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(credentials),
+        });
 
-	return result;
+        if (!request.ok) {
+            throw new Error(`Error: ${request.status} ${request.statusText}`);
+        }
+
+        const result = await request.json();
+        console.log(result);
+
+        return result;
+    } catch (error) {
+        console.error('Registration error:', error);
+        return { success: false, message: error.message };
+    }
 };
 
 export const LoginUser = async (credentials) => {
-	const request = await fetch(`${URL}/login`, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(credentials),
-	});
-	const result = await request.json();
-	console.log(result);
+    try {
+        const request = await fetch(`${URL}auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(credentials),
+        });
 
-	return result;
+        if (!request.ok) {
+            throw new Error(`Error: ${request.status} ${request.statusText}`);
+        }
+
+        const result = await request.json();
+        console.log(result);
+
+        return result;
+    } catch (error) {
+        console.error('Login error:', error);
+        return { success: false, message: error.message };
+    }
 };
 
 export const getProfile = async (token) => {
-	const response = await fetch(`${URL}/profile`, {
-		method: 'GET',
-		headers: {
-			'Content-Type': 'application/json',
-			'Authorization': `Bearer ${token}`
-		},
-	});
+    try {
+        const response = await fetch(`${URL}users/profile`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+        });
 
-	return await response.json();
-}
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Get profile error:', error);
+        return { success: false, message: error.message };
+    }
+};

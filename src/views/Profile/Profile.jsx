@@ -8,10 +8,9 @@ import { getProfile } from '../../apiCalls/apiCalls';
 export const Profile = () => {
 
     const [profileData, setProfileData] = useState({
-        name: "",
-        is_active: null,
-        created_at: "",
-        updated_at: ""
+        first_name: "",
+        last_name: "",
+        email: "",
     })
 
 	const passport = JSON.parse(localStorage.getItem('passport'));
@@ -46,10 +45,9 @@ export const Profile = () => {
 
 	return(
     <>
-    <p>Name: {profileData.name}</p>
-    <p>Active?: {profileData.is_active ? 'Yes' : 'No'}</p>
-    <p>Created at: {profileData.created_at}</p>
-    <p>Updated at: {profileData.updated_at}</p>
+    <p>First name: {profileData.first_name}</p>
+    <p>Last name: {profileData.last_name}</p>
+    <p>Email: {profileData.email}</p>
     <CInput type="button" name="logout" clickFunction={logout} value="Logout"/>
 
     </>

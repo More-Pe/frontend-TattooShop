@@ -27,3 +27,15 @@ export const LoginUser = async (credentials) => {
 
 	return result;
 };
+
+export const getProfile = async (token) => {
+	const response = await fetch(`${URL}/profile`, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${token}`
+		},
+	});
+
+	return await response.json();
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { CInput } from '../../components/CInput/CInput'
+import { CInput } from '../../../components/CInput/CInput'
 
 export const Appointments = () => {
     const [Appointments, setAppointments] = useState([])

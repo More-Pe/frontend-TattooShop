@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { CInput } from '../CInput/CInput.jsx';
-import { LoginUser } from '../../Services/apiCalls.js';
+import { LoginUser } from '../../services/apiCalls.js';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 export const CLogin = () => {

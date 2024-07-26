@@ -1,8 +1,8 @@
-const URL = 'http://localhost:4000/api/'
+const URL = 'http://localhost:4000/api'
 
 export const RegisterUser = async (credentials) => {
     try {
-        const request = await fetch(`${URL}auth/register`, {
+        const request = await fetch(`${URL}/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ export const RegisterUser = async (credentials) => {
 
 export const LoginUser = async (credentials) => {
     try {
-        const request = await fetch(`${URL}auth/login`, {
+        const request = await fetch(`${URL}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export const LoginUser = async (credentials) => {
 
 export const getProfile = async (token) => {
     try {
-        const response = await fetch(`${URL}users/profile`, {
+        const response = await fetch(`${URL}/users/profile`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

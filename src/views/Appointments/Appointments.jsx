@@ -1,27 +1,46 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { CInput } from '../../components/CInput/CInput'
-import { useState } from 'react'
 
 export const Appointments = () => {
-    const [appointments, setAppointments] = useState([])
+    const [Appointments, setAppointments] = useState([])
     const [newAppointment, setNewAppointment] = useState({
-        user_id: '', //este viene del token
-        service_id: '', //el servicio lo elegiré en un desplegable
-        appointment_date: '' //date lo sacaremos de un input type='date' (y opcionalmente input type='time')
+        service_id: "",
+        appointment_date: ""
     })
 
-    useEffect(()=> {
+    useEffect((e)=> {
+        console.log(1);
         //getMyAppointments (token)
-        console.log("tenemos app");
-    },[])
-    const todayString = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"))
+        console.log(newAppointment);
+    },[newAppointment])
+    
+    const inputHandler = (e) => {
+        const keyToUpdate = e.target.name
+        
+        setNewAppointment({
+            ...newAppointment,
+            [keyToUpdate]: e.target.value
+        })
+    }
+    
+    const services = [{id:1, serviceName: "tattoo"}, {id:2, serviceName: "remove tattoo"}]
+
+    const todayFullTimeString = new Date().toISOString().slice(0,new Date().toISOString().lastIndexOf(":"))
+
+
+
   return (
     <>
     <div>
-        {/* <CInput type="date" />
-        <CInput type="date" /> */}
-        <CInput type="datetime-local" value={newAppointment.value} name="date" />
+        <input type="datetime-local" min={todayFullTimeString} value={newAppointment.date} name="date" onChange={(e) => inputHandler(e)}/>
+        
+        <select defaultValue="" onChange={inputHandler}>
+        <option disabled hidden value="">Please choose...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
     </div>
     </>
   )

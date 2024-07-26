@@ -6,8 +6,14 @@ import { NotFound } from '../../components/NotFound/Notfound.jsx';
 import { Register } from '../Public/Register/Register.jsx';
 import { Profile } from '../User/Profile/Profile.jsx';
 import { Appointments } from '../User/Appointments/Appointments.jsx';
+import { SuperAdmin } from '../SuperAdmin/SuperAdmin.jsx';
 
 export const Body = () => {
+	const passport = JSON.parse(localStorage.getItem('passport'));
+	let role_id = null;
+	if(passport){
+	  role_id = passport.tokenData.role_id
+	}
 	return (
 		<>
 			<Routes>
@@ -35,6 +41,12 @@ export const Body = () => {
 					path='/appointments'
 					element={<Appointments />}
 				/>
+				{role_id === 1 && (
+					<Route
+						path='/superadmin'
+						element={<SuperAdmin />}
+					/>
+				)}
 			</Routes>
 		</>
 	);

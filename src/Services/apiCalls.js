@@ -1,5 +1,7 @@
 const URL = 'http://localhost:4000/api'
 
+//PUBLIC
+
 export const RegisterUser = async (credentials) => {
     try {
         const request = await fetch(`${URL}/auth/register`, {
@@ -48,6 +50,8 @@ export const LoginUser = async (credentials) => {
     }
 };
 
+//USER
+
 export const getProfile = async (token) => {
     try {
         const response = await fetch(`${URL}/users/profile`, {
@@ -81,4 +85,27 @@ export const updateProfile = async (data, token) => {
   });
 
   return await response.json();
+}
+
+//SUPER ADMIN
+export const getAllUsers = async (token) => {
+	const response = await fetch (`${URL}/users`,{
+		method: "GET",
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${token}`
+		},
+	})
+	return await response.json();
+}
+
+export const deleteUserById =async (token, id) => {
+	const response = await fetch (`${URL}/users/${id}`,{
+		method: "DELETE",
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${token}`
+		},
+	})
+	return await response.json();
 }

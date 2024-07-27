@@ -6,7 +6,8 @@ import '../Header/Header.css';
 export const Header = () => {
 	const navigate = useNavigate();
 	const passport = JSON.parse(localStorage.getItem('passport'));
-	let token = passport?.token;
+	let role_id = passport?.tokenData?.role_id;
+	const isLoggedIn = !!passport;
 
 	const handleLogout = () => {
 		localStorage.removeItem('passport');
@@ -20,27 +21,40 @@ export const Header = () => {
 					path='/'
 					content='Home'
 				/>
-				<CSurfer
-					path='/register'
-					content='Register'
-				/>
-				<CSurfer
-					path='/login'
-					content='Login'
-				/>
-				<CSurfer
-					path='/profile'
-					content='Profile'
-				/>
-				<CSurfer
-					path='/appointments'
-					content='Appointments'
-				/>
-				<div
+{!isLoggedIn && (
+                    <>
+                        <CSurfer
+                            path='/login'
+                            content='Login'
+                        />
+                        <CSurfer
+                            path='/register'
+                            content='Register'
+                        />
+                    </>
+                )}
+				  {isLoggedIn && (
+                    <>
+                        <CSurfer
+                            path='/profile'
+                            content='Profile'
+                        />
+                    				<div
 					onClick={handleLogout}>
 					{' '}
 					Logout
 				</div>
+                    </>
+                )}
+				<CSurfer
+					path='/appointments'
+					content='Appointments'
+				/>
+				{role_id === 1 && (
+                    <CSurfer
+                        path='/superadmin'
+                        content='SuperAdmin'
+                    />)}
 			</div>
 		</>
 	);

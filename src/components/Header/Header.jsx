@@ -21,6 +21,10 @@ export const Header = () => {
 					path='/'
 					content='Home'
 				/>
+										                        <CSurfer
+                            path='/services'
+                            content='Services'
+                        />
 {!isLoggedIn && (
                     <>
                         <CSurfer
@@ -30,10 +34,6 @@ export const Header = () => {
                         <CSurfer
                             path='/register'
                             content='Register'
-                        />
-						                        <CSurfer
-                            path='/services'
-                            content='Services'
                         />
                     </>
                 )}

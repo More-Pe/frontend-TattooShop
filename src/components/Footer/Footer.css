@@ -1,0 +1,30 @@
+.baseline {
+    background-color: #1e1e1e;
+    color: #f5f5f5; 
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #6d071a;
+  }
+  
+  .baseline a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .baseline a:hover {
+    color: #f0e68c;
+  }
+  
+  .baseline .social-icons {
+    margin-top: 10px;
+  }
+  
+  .baseline .contact-info,
+  .baseline .hours,
+  .baseline .important {
+    margin: 10px 0;
+  }
+
+  

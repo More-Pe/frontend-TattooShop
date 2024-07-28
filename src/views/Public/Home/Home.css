@@ -1,7 +1,11 @@
-.content {
+.home-section {
     background-color: var(--white);
     padding: 20px;
     border: 1px solid var(--bordeaux);
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.logo {
+    height: 16rem;
 }

@@ -4,6 +4,8 @@ import { CInput } from '../CInput/CInput.jsx';
 import { LoginUser } from '../../services/apiCalls.js';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
+import './CLogin.css';
+
 export const CLogin = () => {
 	const navigate = useNavigate();
 	const [credentials, setCredentials] = useState({
@@ -56,7 +58,7 @@ export const CLogin = () => {
 					emitFunction={handleChange}
 				/>
 			</div>
-			<CInput
+			<CInput className='button'
 				type='button'
 				name='button'
 				value='Login'

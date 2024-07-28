@@ -56,7 +56,7 @@ export const CRegister = () => {
 					emitFunction={handleChange}
 				/>
 			</div>
-			<CInput
+			<CInput className='button'
 				type='button'
 				name="r-button"
 				value='Register'

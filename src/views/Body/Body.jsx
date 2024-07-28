@@ -12,8 +12,8 @@ import { Services } from '../Public/Services/Services.jsx';
 export const Body = () => {
 	const passport = JSON.parse(localStorage.getItem('passport'));
 	let role_id = null;
-	if(passport){
-	  role_id = passport.tokenData.role_id
+	if (passport) {
+		role_id = passport.tokenData.role_id;
 	}
 	return (
 		<>
@@ -34,7 +34,7 @@ export const Body = () => {
 					path='/register'
 					element={<Register />}
 				/>
-								<Route
+				<Route
 					path='/services'
 					element={<Services />}
 				/>

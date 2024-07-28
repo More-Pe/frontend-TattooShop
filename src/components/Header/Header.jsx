@@ -21,44 +21,40 @@ export const Header = () => {
 					path='/'
 					content='Home'
 				/>
-										                        <CSurfer
-                            path='/services'
-                            content='Services'
-                        />
-{!isLoggedIn && (
-                    <>
-                        <CSurfer
-                            path='/login'
-                            content='Login'
-                        />
-                        <CSurfer
-                            path='/register'
-                            content='Register'
-                        />
-                    </>
-                )}
-				  {isLoggedIn && (
-                    <>
-                        <CSurfer
-                            path='/profile'
-                            content='Profile'
-                        />
-                    				<div
-					onClick={handleLogout}>
-					{' '}
-					Logout
-				</div>
 				<CSurfer
-					path='/appointments'
-					content='Appointments'
+					path='/services'
+					content='Services'
 				/>
-                    </>
-                )}
+				{!isLoggedIn ? (
+					<>
+						<CSurfer
+							path='/login'
+							content='Login'
+						/>
+						<CSurfer
+							path='/register'
+							content='Register'
+						/>
+					</>
+				) : (
+					<>
+						<CSurfer
+							path='/profile'
+							content='Profile'
+						/>
+						<CSurfer
+							path='/appointments'
+							content='Appointments'
+						/>
+						<div onClick={handleLogout}>Logout</div>
+					</>
+				)}
 				{role_id === 1 && (
-                    <CSurfer
-                        path='/superadmin'
-                        content='SuperAdmin'
-                    />)}
+					<CSurfer
+						path='/superadmin'
+						content='SuperAdmin'
+					/>
+				)}
 			</div>
 		</>
 	);

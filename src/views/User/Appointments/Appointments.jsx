@@ -51,7 +51,7 @@ export const Appointments = () => {
 			const result = await createAppointment(newAppointment, token);
 			if (result.success) {
 				console.log(result);
-				navigate('/appointments');
+				navigate('/myappointments');
 			} else {
 				console.error('Error creating appointment:', result.message);
 			}

@@ -3,7 +3,7 @@
 This project aims to develop the frontend system for a tattoo studio appointment management system. The system allows users to register, log in, and access their personal area, where they can view and create appointments for various services offered by the studio.
 
 <div align="center">
-  <img src="./img/tattoo_giphy.webp" alt="via GIPHY">
+  <img src="./src/assets/img/logotipo+nombre.png" alt="via GIPHY">
 </div>
 
 ## 🛠️ Services
@@ -18,7 +18,7 @@ The studio offers the following services:
 
 ## ⚙️ Stack
 
-<img alt="vsc" src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"><img alt="mysql" src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"><img alt="typescript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"><img alt="jwt" src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white"><img alt= "express" src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white"> <img alt="nodejs" src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"><img alt="npm" src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> <img alt="docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
+<img alt="vsc" src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"><img alt="mjavascript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"><img alt="react" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"><img alt="docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
 
 ## Local installation option
 
@@ -41,11 +41,23 @@ $ `$ cd frontend-TattooShop`
 
 | Page        | Screenshot                                       |
 |-------------|--------------------------------------------------|
-| **Home Page**   | ![Home Page](./img/home_page_screenshot.png)   |
-| **Login Page**  | ![Login Page](./img/login_page_screenshot.png)  |
-| **Dashboard**   | ![Dashboard](./img/dashboard_screenshot.png)     |
-| **Appointments**| ![Appointments](./img/appointments_screenshot.png)|
-| **Profile**     | ![Profile](./img/profile_screenshot.png)         |
+| **Home Page**   | ![Home Page](./src/assets/img/Home.png)   |
+| **Services**   | ![Services](./src/assets/img/Services.png)     |
+| **Create appintment**  | ![Create Appointment](./src/assets/img/CreateAppointment.png)  |
+| **View my appointments**| ![My Appointments](./src/assets/img/MyAppointments.png)|
+| **Profile**     | ![Profile](./src/assets/img/Profile.png)         |
+
+## 🌟 To improve
+
+In order to enhance the overall user experience and functionality of the application, the following improvements are planned:
+
+1. **General Design Enhancement**: We aim to refine and enhance the overall design of the application to make it more user-friendly, visually appealing, and intuitive.
+
+2. **Add Catalog of Piercings and Tattoos**: We will introduce a comprehensive catalog that includes a variety of piercings and tattoos, allowing users to browse and explore different styles and options.
+
+3. **Add Contact Page**: A dedicated contact page will be added to provide users with a straightforward way to get in touch with us for inquiries, appointments, and support.
+
+4. **Add Tattoo Artists Page**: We will create a page dedicated to showcasing our talented tattoo artists, including their portfolios and professional backgrounds, to help users choose the right artist for their needs.
 
 ## 📞 Contact
 

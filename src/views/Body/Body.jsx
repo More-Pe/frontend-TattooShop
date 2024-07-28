@@ -7,6 +7,7 @@ import { Register } from '../Public/Register/Register.jsx';
 import { Profile } from '../User/Profile/Profile.jsx';
 import { Appointments } from '../User/Appointments/Appointments.jsx';
 import { SuperAdmin } from '../SuperAdmin/SuperAdmin.jsx';
+import { Services } from '../Public/Services/Services.jsx';
 
 export const Body = () => {
 	const passport = JSON.parse(localStorage.getItem('passport'));
@@ -32,6 +33,10 @@ export const Body = () => {
 				<Route
 					path='/register'
 					element={<Register />}
+				/>
+								<Route
+					path='/services'
+					element={<Services />}
 				/>
 				<Route
 					path='/profile'

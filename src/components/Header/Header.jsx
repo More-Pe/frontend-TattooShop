@@ -31,6 +31,10 @@ export const Header = () => {
                             path='/register'
                             content='Register'
                         />
+						                        <CSurfer
+                            path='/services'
+                            content='Services'
+                        />
                     </>
                 )}
 				  {isLoggedIn && (

@@ -50,6 +50,16 @@ export const LoginUser = async (credentials) => {
     }
 };
 
+export const getAllServices = async () => {
+	const response = await fetch (`${URL}/services`,{
+		method: "GET",
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	})
+	return await response.json();
+}
+
 //USER
 
 export const getProfile = async (token) => {

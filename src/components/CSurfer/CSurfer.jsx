@@ -14,3 +14,4 @@ export const CSurfer = (
     <div onClick={ ()=> navigate(path) }>{ content }</div>
   )
 }
+

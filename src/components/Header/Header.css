@@ -1,31 +1,26 @@
 .header-container {
-    background-color: #1e1e1e; /* Black background */
-    color: #f5f5f5; /* White text */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-    border-bottom: 2px solid #6d071a; /* Bordeaux border at the bottom */
-  }
-  
-  .header-container a {
-    color: #f5f5f5; /* White color for links */
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .CSurfer {
-    color: #d4af37; /* Golden color for links on hover */
-  }
-  
-  .header-container .logout {
-    cursor: pointer;
-    color: #f5f5f5; /* White color for logout */
-    margin: 0 10px;
-  }
-  
-  .header-container .logout:hover {
-    color: #d4af37; /* Golden color for logout on hover */
-  }
-  
+	background-color: #1e1e1e; 
+	color: #f5f5f5; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	font-family: Arial, sans-serif;
+	border-bottom: 2px solid #6d071a; 
+}
+
+.header-container a {
+	color: #f5f5f5; 
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.header-container .logout {
+	cursor: pointer;
+	color: #f5f5f5; 
+	margin: 0 10px;
+}
+
+.header-container .logout:hover {
+	color: #d4af37; 
+}

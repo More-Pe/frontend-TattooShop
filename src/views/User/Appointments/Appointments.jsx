@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CInput } from '../../../components/CInput/CInput';
 import { createAppointment, getAllServices } from '../../../services/apiCalls';
 import { useNavigate } from 'react-router-dom';
+import '../Appointments/GetAnDeleteApp.css';
 
 export const Appointments = () => {
 	const [newAppointment, setNewAppointment] = useState({
@@ -61,8 +62,8 @@ export const Appointments = () => {
 	};
 
 	return (
-		<div>
-			<input
+		<div className='container'>
+			<input className='input'
 				type='datetime-local'
 				min={todayFullTimeString}
 				value={newAppointment.appointment_date}
@@ -89,12 +90,11 @@ export const Appointments = () => {
 				))}
 			</select>
 
-			<div className='button-div'>
-				<CInput
+			<div>
+				<CInput className='button'
 					type='button'
-					value='Create Appointment'
+					value='Create'
 					clickFunction={handleSendAppointment}
-					className='button-style'
 				/>
 			</div>
 		</div>

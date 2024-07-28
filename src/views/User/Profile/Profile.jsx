@@ -66,10 +66,9 @@ export const Profile = () => {
 
   return (
     <>
-    <h2>Profile info: </h2>
-    <p className={editing ? "hidden" : ""}>
+    <h3 className={editing ? "hidden" : ""}>
       First name: {profileData.first_name ? profileData.first_name : "N/A"}
-    </p>
+    </h3>
     <CInput
       type="text"
       name="first_name"
@@ -77,9 +76,9 @@ export const Profile = () => {
       className={editing ? "" : "hidden"}
       emitFunction={editInputHandler}
     />
-     <p className={editing ? "hidden" : ""}>
+     <h3 className={editing ? "hidden" : ""}>
       Last name: {profileData.last_name ? profileData.last_name : "N/A"}
-    </p>
+    </h3>
     <CInput
       type="text"
       name="last_name"
@@ -88,7 +87,7 @@ export const Profile = () => {
       emitFunction={editInputHandler}
     />
     
-    <p className={editing ? "hidden" : ""}>Email: {profileData.email}</p>
+    <h3 className={editing ? "hidden" : ""}>Email: {profileData.email}</h3>
     <CInput
       type="email"
       name="email"
@@ -96,7 +95,7 @@ export const Profile = () => {
       className={editing ? "" : "hidden"}
       emitFunction={editInputHandler}
     />
-    <CInput
+    <CInput className='button'
       type="button"
       name="Edit"
       value={editing ? "Cancel" : "Edit"}
@@ -105,8 +104,8 @@ export const Profile = () => {
     <CInput
       type="button"
       name="send"
-      value="Save changes"
-      className={editing ? "" : "hidden"}
+      value="Save"
+      className={editing ? "button" : "hidden"}
       clickFunction={confirmButtonHandler}
     />
   </>

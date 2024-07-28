@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { deleteUserById, getAllUsers } from '../../services/apiCalls';
-import './SuperAdmin.css';
+import '../SuperAdmin/SuperAdmin.css';
 import { CInput } from '../../components/CInput/CInput.jsx';
 
 export const SuperAdmin = () => {
@@ -31,13 +31,12 @@ export const SuperAdmin = () => {
 
 	return (
 		<>
-			<h1>SuperAdmin</h1>
 			<div className='users-container'>
 				<div className='table-row'>
-					<div className='content'>ID</div>
-					<div className='content'>EMAIL</div>
-					<div className='content'>NAME</div>
-					<div className='content'>ACTIONS</div>
+					<h2 className='title'>ID</h2>
+					<h2 className='title'>EMAIL</h2>
+					<h2 className='title'>NAME</h2>
+					<h2 className='title'>ACTIONS</h2>
 				</div>
 				{users.length &&
 					users.map((user, index) => {

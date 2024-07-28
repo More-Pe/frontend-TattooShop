@@ -17,11 +17,10 @@ export const Services = () => {
 
 	return (
 		<>
-			<h1>Services</h1>
 			<div className='services-container'>
 				<div className='table-row'>
-					<div className='content'>SERVICE</div>
-					<div className='content'>DESCRIPTION</div>
+					<h2 className='title'>SERVICE</h2>
+					<h2 className='title'>DESCRIPTION</h2>
 				</div>
 				{services.length &&
 					services.map((service, index) => {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { deleteAppointment, getMyAppointments } from '../../../services/apiCalls.js'
 import { CInput } from '../../../components/CInput/CInput.jsx'
 import { format } from 'date-fns';
+import '../Appointments/GetAnDeleteApp.css';
 
 export const GetAndDeleteApp = () => {
     const [appointments, setAppointments] = useState([]);
@@ -46,16 +47,15 @@ export const GetAndDeleteApp = () => {
 
     return (
         <>
-            <h1>Get And Delete Appointments</h1>
             {error && <div className='error-message'>{error}</div>}
             {appointments.length === 0 ? (
                 <div className='no-appointments-message'>You don't have any appointments yet</div>
             ) : (
                 <div className='appointments-container'>
                     <div className='table-row'>
-                        <div className='content'>DATE</div>
-                        <div className='content'>SERVICE NAME</div>
-                        <div className='content'>ACTIONS</div>
+                        <h2 className='content'>DATE</h2>
+                        <h2 className='content'>SERVICE NAME</h2>
+                        <h2 className='content'>ACTIONS</h2>
                     </div>
                     {appointments.map((appointment) => (
                         <div className='table-row' key={appointment.id}>

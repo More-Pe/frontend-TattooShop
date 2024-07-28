@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { deleteUserById, getAllUsers } from '../../services/apiCalls';
 import './SuperAdmin.css';
-import { CInput } from '../../components/CInput/CInput.jsx'
+import { CInput } from '../../components/CInput/CInput.jsx';
 
 export const SuperAdmin = () => {
 	const [users, setUsers] = useState([]);
@@ -11,7 +11,6 @@ export const SuperAdmin = () => {
 	useEffect(() => {
 		const bringAllUsers = async () => {
 			const allUsers = await getAllUsers(token);
-			console.log(allUsers);
 			if (allUsers.success) {
 				setUsers(allUsers.data);
 			}
@@ -19,11 +18,16 @@ export const SuperAdmin = () => {
 		bringAllUsers();
 	}, []);
 
-    const deleteUserHandler = async (e) => {
-		const id = e.target.name;
+	const deleteUserHandler = async (e) => {
+		const id = +e.target.name;
 		const res = await deleteUserById(token, id);
-		console.log(res);
-    }
+		if (res.success) {
+			const resUsers = users.filter((user) => {
+				if (user.id !== id) return user;
+			});
+			setUsers(resUsers);
+		}
+	};
 
 	return (
 		<>
@@ -32,24 +36,26 @@ export const SuperAdmin = () => {
 				<div className='table-row'>
 					<div className='content'>ID</div>
 					<div className='content'>EMAIL</div>
-					<div className='content'>ACTIVE?</div>
+					<div className='content'>NAME</div>
 					<div className='content'>ACTIONS</div>
 				</div>
 				{users.length &&
-					users.map((user) => {
+					users.map((user, index) => {
 						return (
 							<div
 								className='table-row'
 								key={user.id}>
 								<div className='content'>{user.id}</div>
 								<div className='content'>{user.email}</div>
-								<div className='content'>{user.is_active ? 'Yes' : 'No'}</div>
+								<div className='content'>
+									{user.first_name ? user.first_name : 'No unavailable'}
+								</div>
 								<div className='content'>
 									<CInput
 										type='button'
-                                        name={user.id}
+										name={user.id}
 										value='⊘'
-                                        clickFunction={deleteUserHandler}
+										clickFunction={deleteUserHandler}
 									/>
 								</div>
 							</div>

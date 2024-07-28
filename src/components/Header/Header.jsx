@@ -44,12 +44,12 @@ export const Header = () => {
 					{' '}
 					Logout
 				</div>
-                    </>
-                )}
 				<CSurfer
 					path='/appointments'
 					content='Appointments'
 				/>
+                    </>
+                )}
 				{role_id === 1 && (
                     <CSurfer
                         path='/superadmin'

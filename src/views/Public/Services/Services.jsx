@@ -21,6 +21,7 @@ export const Services = () => {
 				<div className='table-row'>
 					<h2 className='title'>SERVICE</h2>
 					<h2 className='title'>DESCRIPTION</h2>
+					<h2 className='title'></h2>
 				</div>
 				{services.length &&
 					services.map((service, index) => {
@@ -30,6 +31,8 @@ export const Services = () => {
 								key={service.id}>
 								<div className='content'>{service.service_name}</div>
 								<div className='content'>{service.description}</div>
+								<div className='content'><img src={service.image_url}></img></div>
+								
 							</div>
 						);
 					})}

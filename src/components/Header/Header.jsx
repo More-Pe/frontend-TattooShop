@@ -46,6 +46,10 @@ export const Header = () => {
 							path='/appointments'
 							content='Appointments'
 						/>
+						<CSurfer
+							path='/myappointments'
+							content='My Appointments'
+						/>
 						<div onClick={handleLogout}>Logout</div>
 					</>
 				)}

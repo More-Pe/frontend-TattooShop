@@ -8,6 +8,7 @@ import { Profile } from '../User/Profile/Profile.jsx';
 import { Appointments } from '../User/Appointments/Appointments.jsx';
 import { SuperAdmin } from '../SuperAdmin/SuperAdmin.jsx';
 import { Services } from '../Public/Services/Services.jsx';
+import { GetAndDeleteApp } from '../User/Appointments/GetAndDeleteApp.jsx';
 
 export const Body = () => {
 	const passport = JSON.parse(localStorage.getItem('passport'));
@@ -45,6 +46,10 @@ export const Body = () => {
 				<Route
 					path='/appointments'
 					element={<Appointments />}
+				/>
+								<Route
+					path='/myappointments'
+					element={<GetAndDeleteApp />}
 				/>
 				{role_id === 1 && (
 					<Route

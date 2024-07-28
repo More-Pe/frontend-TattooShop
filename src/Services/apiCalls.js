@@ -97,14 +97,25 @@ export const updateProfile = async (data, token) => {
 	return await response.json();
 };
 
-export const getMyAppointments = async () => {
-	const response = await fetch(`${URL}/appointments`, {
-		method: 'GET',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	});
-	return await response.json();
+
+export const getMyAppointments = async (token) => {
+	try {
+		const response = await fetch(`${URL}/appointments`, {
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${token}`,
+			},
+		});
+
+		if (!response.ok) {
+			return { success: false, message: `Error: ${response.status} ${response.statusText}` };
+		}
+
+		return await response.json();
+	} catch (error) {
+		return { success: false, message: 'Failed to fetch appointments' };
+	}
 };
 
 export const createAppointment = async (data, token) => {
@@ -120,14 +131,23 @@ export const createAppointment = async (data, token) => {
 };
 
 export const deleteAppointment = async (token, id) => {
-	const response = await fetch(`${URL}/appointments/${id}`, {
-		method: 'DELETE',
-		headers: {
-            'Content-Type': 'application/json',
-			Authorization: `Bearer ${token}`,
-		},
-	});
-	return await response.json();
+	try {
+		const response = await fetch(`${URL}/appointments/${id}`, {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${token}`,
+			},
+		});
+
+		if (!response.ok) {
+			return { success: false, message: `Error: ${response.status} ${response.statusText}` };
+		}
+
+		return await response.json();
+	} catch (error) {
+		return { success: false, message: 'Failed to delete appointment' };
+	}
 };
 
 //SUPER ADMIN

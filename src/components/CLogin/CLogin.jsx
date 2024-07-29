@@ -78,7 +78,7 @@ export const CLogin = () => {
 
     return (
         <div className='log-container'>
-            <h1>Welcome back!</h1>
+            <h1>Welcome again!</h1>
             <h3>Please log in to your account to view or book your appointments.</h3>
             <div>
                 <CInput

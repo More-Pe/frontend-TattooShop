@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
 .home-container{
     display: flex;
     flex-direction: column;
@@ -18,4 +21,12 @@
 
 .logo {
     height: 16rem;
+}
+
+h1, h2, .nav-item{
+    font-family: 'UnifrakturCook', serif;
+}
+
+p, span, div {
+    font-family: 'Lato', sans-serif;
 }

@@ -19,8 +19,8 @@ export const Services = () => {
 		<>
 			<div className='services-container'>
 				<div className='table-row'>
-					<h2 className='title'>SERVICE</h2>
-					<h2 className='title'>DESCRIPTION</h2>
+					<h2 className='title'>Service</h2>
+					<h2 className='title'>Description</h2>
 					<h2 className='title'></h2>
 				</div>
 				{services.length &&

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { CInput } from '../CInput/CInput.jsx';
 import { RegisterUser } from '../../services/apiCalls.js';
 import { useNavigate } from 'react-router-dom';
+import './CRegister.css';
 
 export const CRegister = () => {
 	const navigate = useNavigate();
@@ -24,44 +25,44 @@ export const CRegister = () => {
 			console.log(credentials);
 			const response = await RegisterUser(credentials); // guarda la repsuesta en una variale
 
-
 			if (response.success) {
 				navigate('/login');
 			} else {
-				alert(response.message)
+				alert(response.message);
 			}
-			
 		} catch (error) {
 			console.log(error);
 		}
 	}
 	return (
-		<>
-			<h1>Register</h1>
+		<div className='reg-container'>
+			<h1>¡Sign up!</h1>
+			<h3>Create an account to start enjoying our services.</h3>
 			<div>
-				{/* <label htmlFor="email">Email </label> */}
 				<CInput
+					className='reg-input'
 					type='email'
 					name='email'
-					placeholder='Email'
+					placeholder='example@example.com'
 					emitFunction={handleChange}
 				/>
 			</div>
 			<div>
-				{/* <label htmlFor="password">Password </label> */}
 				<CInput
+					className='reg-input'
 					type='password'
 					name='password_hash'
-					placeholder='Password'
+					placeholder='Your password must be 8 - 12 characters long'
 					emitFunction={handleChange}
 				/>
 			</div>
-			<CInput className='button'
+			<CInput
+				className='reg-button'
 				type='button'
-				name="r-button"
+				name='r-button'
 				value='Register'
 				clickFunction={register}
 			/>
-		</>
+		</div>
 	);
 };

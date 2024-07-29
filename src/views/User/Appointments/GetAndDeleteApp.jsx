@@ -46,23 +46,23 @@ export const GetAndDeleteApp = () => {
     };
 
     return (
-        <>
+        <div className='container'>
             {error && <div className='error-message'>{error}</div>}
             {appointments.length === 0 ? (
-                <div className='no-appointments-message'>You don't have any appointments yet</div>
+                <h2>You don't have any appointments yet!</h2>
             ) : (
                 <div className='appointments-container'>
                     <div className='table-row'>
-                        <h2 className='content'>DATE</h2>
-                        <h2 className='content'>SERVICE NAME</h2>
-                        <h2 className='content'>ACTIONS</h2>
+                        <h2>DATE</h2>
+                        <h2>SERVICE NAME</h2>
+                        <h2>DELETE</h2>
                     </div>
                     {appointments.map((appointment) => (
                         <div className='table-row' key={appointment.id}>
                             <div className='content'>{formatDate(appointment.appointment_date)}</div>
                             <div className='content'>{appointment.service.service_name}</div>
                             <div className='content'>
-                                <CInput
+                                <CInput className='button'
                                     type='button'
                                     name={appointment.id}
                                     value='⊘'
@@ -73,6 +73,6 @@ export const GetAndDeleteApp = () => {
                     ))}
                 </div>
             )}
-        </>
+        </div>
     );
 };

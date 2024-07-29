@@ -40,30 +40,34 @@ export const CLogin = () => {
 		}
 	}
 	return (
-		<>
-			<h1>Login</h1>
+		<div className='log-container'>
+			<h1>¡Welcome back!</h1>
+			<h3>Please log in to your account to view or book your appointments.</h3>
 			<div>
 				<CInput
+					className='log-input'
 					type='email'
 					name='email'
-					placeholder='Email'
+					placeholder='Put your email'
 					emitFunction={handleChange}
 				/>
 			</div>
 			<div>
 				<CInput
+					className='log-input'
 					type='password'
 					name='password_hash'
-					placeholder='Password'
+					placeholder='Put your password'
 					emitFunction={handleChange}
 				/>
 			</div>
-			<CInput className='button'
+			<CInput
+				className='log-button'
 				type='button'
 				name='button'
 				value='Login'
 				clickFunction={login}
 			/>
-		</>
+		</div>
 	);
-}
+};

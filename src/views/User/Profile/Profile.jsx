@@ -65,37 +65,37 @@ export const Profile = () => {
 }
 
   return (
-    <>
-    <h3 className={editing ? "hidden" : ""}>
+    <div className='prof-container'>
+    <h2 className={editing ? "hidden" : ""}>
       First name: {profileData.first_name ? profileData.first_name : "N/A"}
-    </h3>
+    </h2>
     <CInput
       type="text"
       name="first_name"
       placeholder="First name: "
-      className={editing ? "" : "hidden"}
+      className={editing ? "prof-input" : "hidden"}
       emitFunction={editInputHandler}
     />
-     <h3 className={editing ? "hidden" : ""}>
+     <h2 className={editing ? "hidden" : ""}>
       Last name: {profileData.last_name ? profileData.last_name : "N/A"}
-    </h3>
+    </h2>
     <CInput
       type="text"
       name="last_name"
       placeholder="Last name: "
-      className={editing ? "" : "hidden"}
+      className={editing ? "prof-input" : "hidden"}
       emitFunction={editInputHandler}
     />
     
-    <h3 className={editing ? "hidden" : ""}>Email: {profileData.email}</h3>
+    <h2 className={editing ? "hidden" : ""}>Email: {profileData.email}</h2>
     <CInput
       type="email"
       name="email"
       placeholder={editData.email}
-      className={editing ? "" : "hidden"}
+      className={editing ? "prof-input" : "hidden"}
       emitFunction={editInputHandler}
     />
-    <CInput className='button'
+    <CInput className='prof-button'
       type="button"
       name="Edit"
       value={editing ? "Cancel" : "Edit"}
@@ -105,9 +105,9 @@ export const Profile = () => {
       type="button"
       name="send"
       value="Save"
-      className={editing ? "button" : "hidden"}
+      className={editing ? "prof-button" : "hidden"}
       clickFunction={confirmButtonHandler}
     />
-  </>
+  </div>
 );
 };

@@ -3,7 +3,7 @@ import '../Home/Home.css'
 
 export const Home = () => {
 	return (
-        <div className="container">
+        <div className="home-container">
             <img className="logo" src="../../../../src/assets/img/logotipo+nombre.png"></img>
 
             <div className="home-section">

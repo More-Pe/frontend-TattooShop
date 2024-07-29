@@ -1,16 +1,32 @@
 .hidden{
     display: none;
 }
-.button {
+.prof-button {
     background-color: gray;
     border: none;
     border-radius: 3rem;
-    height: 1.5rem;
-    width: 5rem;
+    height: 2rem;
+    width: 10rem;
     margin: 1rem;
-    color: white
+    color: white;
+    font-size: large
     }
     
-    .button:hover{
+    .prof-button:hover{
         background-color: brown;
+    }
+
+    .prof-container{
+        height: 72vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .prof-input{
+        width: 25rem;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: large;
     }

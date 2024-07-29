@@ -71,7 +71,7 @@ export const Appointments = () => {
 				onChange={inputHandler}
 			/>
 
-			<select
+			<select className='app-select'
 				name='service_id'
 				value={newAppointment.service_id}
 				onChange={inputHandler}>

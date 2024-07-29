@@ -31,7 +31,7 @@ export const Services = () => {
 								key={service.id}>
 								<div className='content'>{service.service_name}</div>
 								<div className='content'>{service.description}</div>
-								<div className='content'><img src={service.image_url}></img></div>
+								<div><img className='img' src={service.image_url}></img></div>
 								
 							</div>
 						);

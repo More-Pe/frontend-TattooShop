@@ -36,7 +36,7 @@ export const SuperAdmin = () => {
 					<h2 className='title'>ID</h2>
 					<h2 className='title'>EMAIL</h2>
 					<h2 className='title'>NAME</h2>
-					<h2 className='title'>ACTIONS</h2>
+					<h2 className='title'>DELETE</h2>
 				</div>
 				{users.length &&
 					users.map((user, index) => {
@@ -49,8 +49,8 @@ export const SuperAdmin = () => {
 								<div className='content'>
 									{user.first_name ? user.first_name : 'No unavailable'}
 								</div>
-								<div className='content'>
-									<CInput
+								<div>
+									<CInput className='button'
 										type='button'
 										name={user.id}
 										value='⊘'
@@ -64,3 +64,5 @@ export const SuperAdmin = () => {
 		</>
 	);
 };
+
+//https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Ffotos-premium%2Fgato-trepando-arbol-palabra-felino-el_43290389.htm&psig=AOvVaw0mYmirveRaMz71S5ehUxAO&ust=1722335761160000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJC4zOuGzIcDFQAAAAAdAAAAABAE

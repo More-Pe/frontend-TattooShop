@@ -41,11 +41,11 @@ $ `$ cd frontend-TattooShop`
 
 | Page        | Screenshot                                       |
 |-------------|--------------------------------------------------|
-| **Home Page**   | ![Home Page](./src/assets/img/Home.png)   |
-| **Services**   | ![Services](./src/assets/img/Services.png)     |
-| **Create appintment**  | ![Create Appointment](./src/assets/img/CreateAppointment.png)  |
-| **View my appointments**| ![My Appointments](./src/assets/img/MyAppointments.png)|
-| **Profile**     | ![Profile](./src/assets/img/Profile.png)         |
+| **Home Page**   | ![Home Page](https://i.postimg.cc/XrMQnvfM/Home.png)   |
+| **Services**   | ![Services](https://i.postimg.cc/SJYg09z7/Services.png)     |
+| **Create appintment**  | ![Create Appointment](https://i.postimg.cc/9wrJQRg2/Create-Appointment.png)  |
+| **View my appointments**| ![My Appointments](https://i.postimg.cc/Th4tH0h3/My-Appointments.png)|
+| **Profile**     | ![Profile](https://i.postimg.cc/Cd1vNXh2/Profile.png)         |
 
 ## 🌟 To improve
 

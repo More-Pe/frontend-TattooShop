@@ -34,3 +34,11 @@ h2 {
 	border-radius: 10px;
 	margin-bottom: 20px;
 }
+
+.button{
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: brown;
+}

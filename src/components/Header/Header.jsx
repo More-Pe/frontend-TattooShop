@@ -16,36 +16,36 @@ export const Header = () => {
   
 	return (
 	  <div className='header-container'>
-		<CSurfer
+		<CSurfer className='nav-item'
 		  path='/'
 		  content='Home'
 		/>
-		<CSurfer
+		<CSurfer className='nav-item'
 		  path='/services'
 		  content='Services'
 		/>
 		{!isLoggedIn ? (
 		  <>
-			<CSurfer
+			<CSurfer className='nav-item'
 			  path='/login'
 			  content='Login'
 			/>
-			<CSurfer
+			<CSurfer className='nav-item'
 			  path='/register'
 			  content='Register'
 			/>
 		  </>
 		) : (
 		  <>
-			<CSurfer
+			<CSurfer className='nav-item'
 			  path='/profile'
 			  content='Profile'
 			/>
-			<CSurfer
+			<CSurfer className='nav-item'
 			  path='/appointments'
 			  content='Appointments'
 			/>
-			<CSurfer
+			<CSurfer className='nav-item'
 			  path='/myappointments'
 			  content='My Appointments'
 			/>
@@ -53,7 +53,7 @@ export const Header = () => {
 		  </>
 		)}
 		{role_id === 1 && (
-		  <CSurfer
+		  <CSurfer className='nav-item'
 			path='/superadmin'
 			content='SuperAdmin'
 		  />

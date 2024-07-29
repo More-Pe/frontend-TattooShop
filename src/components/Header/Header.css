@@ -24,3 +24,11 @@
 .header-container .logout:hover {
 	color: #d4af37; 
 }
+
+.nav-item{
+	cursor: pointer;
+}
+
+.nav-item:hover {
+color: #d4af37;
+}

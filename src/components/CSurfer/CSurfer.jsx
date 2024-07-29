@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const CSurfer = (
     {
+        className,
         content,
         path
     }
@@ -11,7 +12,7 @@ export const CSurfer = (
     const navigate = useNavigate();
 
   return (
-    <div onClick={ ()=> navigate(path) }>{ content }</div>
+    <div className={className} onClick={ ()=> navigate(path) }>{ content }</div>
   )
 }
 

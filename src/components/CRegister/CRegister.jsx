@@ -15,15 +15,14 @@ export const CRegister = () => {
 	const handleChange = (e) => {
 		console.log('HandleChange');
 		setCredentials((prevState) => ({
-			//prev State gets the initial value of the credentials variable
 			...prevState,
-			[e.target.name]: e.target.value, //la propiedad [] es dinamica
+			[e.target.name]: e.target.value,
 		}));
 	};
 	async function register() {
 		try {
 			console.log(credentials);
-			const response = await RegisterUser(credentials); // guarda la repsuesta en una variale
+			const response = await RegisterUser(credentials);
 
 			if (response.success) {
 				navigate('/login');

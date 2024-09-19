@@ -31,7 +31,7 @@ $ `$ cd frontend-TattooShop`
 3. Start the development server:
 `$ npm run dev`
 
-## Deploy 🚀
+## 🚀 Deploy
 
 <div align="center">
     <a href="https://tattooshop.zeabur.app"><strong> Tattoo Studio Deploy </strong></a>
